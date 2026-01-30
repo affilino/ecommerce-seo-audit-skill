@@ -81,13 +81,310 @@ Every audit should specifically check for these frequent ecommerce problems:
 9. **Thin Product Content** - Product descriptions under 200 words
 10. **Missing Product Images** - Products without images or broken image links
 
+### Technical Issues:
+11. **Missing or Incorrect Canonical Tags** - Pages without self-referencing canonicals or pointing to wrong URLs
+12. **Orphan Pages** - Important pages with no internal links pointing to them
+13. **Poor Internal Linking Structure** - Inconsistent linking, missing contextual links, or generic anchor text
+
 **Note:** Flag these issues immediately when found in any audit type.
+
+---
+
+## CONTENT STRATEGY & CANNIBALIZATION ANALYSIS
+
+**Include this analysis in: Collection Page, Keyword Research, and Full Comprehensive audits**
+
+### A. Content Funnel Analysis (TOFU, MOFU, BOFU)
+
+Map your content to the buyer's journey:
+
+```
+[ ] Top of Funnel (TOFU) - Awareness Stage
+  Content types:
+  - Blog posts (guides, tips, how-to)
+  - Educational content
+  - Informational keywords (e.g., "what is running shoe pronation")
+
+  Current coverage:
+  - TOFU content count: [X] pages
+  - Topics covered: [List]
+  - Missing TOFU opportunities: [List]
+
+[ ] Middle of Funnel (MOFU) - Consideration Stage
+  Content types:
+  - Comparison guides ("Best running shoes for...")
+  - Category/collection pages
+  - Product category keywords (e.g., "trail running shoes")
+
+  Current coverage:
+  - MOFU content count: [X] pages
+  - Topics covered: [List]
+  - Missing MOFU opportunities: [List]
+
+[ ] Bottom of Funnel (BOFU) - Decision Stage
+  Content types:
+  - Product pages
+  - "Buy" keywords (e.g., "buy nike air max")
+  - Specific product searches
+
+  Current coverage:
+  - BOFU content count: [X] pages
+  - Products covered: [X]
+  - Missing BOFU opportunities: [List]
+
+**Funnel Balance Assessment:**
+- TOFU: [X]% of content (Target: 40-50%)
+- MOFU: [X]% of content (Target: 30-40%)
+- BOFU: [X]% of content (Target: 20-30%)
+
+**Gaps identified:**
+- [Funnel stage]: Need [X] more pieces of content
+- Recommended content to create: [List with rationale]
+```
+
+### B. Keyword Cannibalization Detection
+
+Identify pages competing against each other:
+
+```
+[ ] Cannibalization Audit
+
+**Method 1: Manual Search**
+For each target keyword, check:
+- site:[domain] "[target keyword]"
+- How many pages rank for the same keyword?
+- Are they targeting the same search intent?
+
+**Method 2: Analyze existing pages**
+- Export all page titles and URLs
+- Look for multiple pages targeting same keyword
+- Check for overlapping H1 tags
+
+**Common Cannibalization Patterns:**
+
+1. **Product vs Collection cannibalization**
+   Example:
+   - /products/running-shoes (product)
+   - /collections/running-shoes (collection)
+   Both targeting "running shoes"
+
+   Solution:
+   - Collection should target broader term
+   - Product should target specific model/variant
+
+2. **Blog vs Commercial cannibalization**
+   Example:
+   - /blog/best-running-shoes (informational)
+   - /collections/running-shoes (commercial)
+   Both targeting "best running shoes"
+
+   Solution:
+   - Blog targets TOFU: "how to choose running shoes"
+   - Collection targets MOFU/BOFU: "buy running shoes"
+
+3. **Multiple collection pages**
+   Example:
+   - /collections/mens-shoes
+   - /collections/mens-footwear
+   - /collections/shoes-for-men
+   All targeting same keyword
+
+   Solution:
+   - Consolidate to one primary collection
+   - 301 redirect others or differentiate clearly
+
+**Cannibalization Issues Found:**
+
+| Keyword | Page 1 | Page 2 | Issue | Solution |
+|---------|--------|--------|-------|----------|
+| [keyword] | [URL] | [URL] | Both target same intent | [Specific fix] |
+| [keyword] | [URL] | [URL] | Competing for same keyword | [Specific fix] |
+
+**Action items:**
+1. [Fix for cannibalization issue 1]
+2. [Fix for cannibalization issue 2]
+```
+
+### C. Content Gap Analysis
+
+```
+[ ] TOFU Content Gaps
+  Missing informational content:
+  - [Keyword/topic] - [Search volume] - [Opportunity]
+  - [Keyword/topic] - [Search volume] - [Opportunity]
+
+[ ] MOFU Content Gaps
+  Missing comparison/consideration content:
+  - [Keyword/topic] - [Search volume] - [Opportunity]
+  - [Keyword/topic] - [Search volume] - [Opportunity]
+
+[ ] BOFU Content Gaps
+  Missing product/purchase content:
+  - [Keyword/topic] - [Search volume] - [Opportunity]
+  - [Keyword/topic] - [Search volume] - [Opportunity]
+```
+
+---
+
+## INTERNAL LINKING STRUCTURE ANALYSIS
+
+**Include this analysis in: All audit types**
+
+### A. Site Architecture Assessment
+
+```
+[ ] Navigation Hierarchy
+  - Main navigation links: [X]
+  - Footer links: [X]
+  - Mega menu structure: [Yes/No]
+  - Breadcrumbs: [Yes/No]
+  - Max clicks from homepage to deepest page: [X] (Target: ≤3)
+
+[ ] Link Distribution Pattern
+  - Homepage outgoing links: [X]
+  - Average collection page outgoing links: [X]
+  - Average product page outgoing links: [X]
+
+  Assessment: [Even distribution / Top-heavy / Bottom-heavy]
+```
+
+### B. Internal Link Audit
+
+```
+[ ] Link Equity Flow
+
+**Hub Pages (should receive most internal links):**
+| Page | Internal Links Pointing In | Assessment |
+|------|---------------------------|------------|
+| Homepage | [X] | [Good/Needs improvement] |
+| [Top collection] | [X] | [Good/Needs improvement] |
+| [Top collection] | [X] | [Good/Needs improvement] |
+
+**Money Pages (high-revenue products/collections):**
+| Page | Revenue | Internal Links | Links Needed |
+|------|---------|----------------|--------------|
+| [Product/Collection] | $[X]/mo | [X] | +[X] more |
+| [Product/Collection] | $[X]/mo | [X] | +[X] more |
+
+**Orphan Pages (pages with no internal links):**
+- [URL] - [Importance: High/Medium/Low]
+- [URL] - [Importance: High/Medium/Low]
+
+**Fix orphan pages:**
+- Add to sitemap
+- Link from relevant collection pages
+- Link from related products
+
+[ ] Anchor Text Analysis
+  - Generic anchors ("click here", "read more"): [X]% (Target: <10%)
+  - Branded anchors: [X]%
+  - Exact match anchors: [X]%
+  - Partial match anchors: [X]%
+
+  Issues:
+  - Too many generic anchors
+  - Missing keyword-rich contextual links
+
+  Recommendation:
+  - Replace generic anchors with descriptive text
+  - Example: "click here" → "shop running shoes for women"
+
+[ ] Link Depth
+  Analyze how many clicks it takes to reach important pages:
+
+  | Page Type | Avg Clicks from Home | Target | Status |
+  |-----------|---------------------|--------|--------|
+  | Top collections | [X] | 1 | [PASS/FAIL] |
+  | New products | [X] | 2 | [PASS/FAIL] |
+  | Regular products | [X] | 3 | [PASS/FAIL] |
+  | Blog posts | [X] | 3 | [PASS/FAIL] |
+```
+
+### C. Strategic Internal Linking Opportunities
+
+```
+[ ] Hub-and-Spoke Model
+  Create content hubs:
+  - Hub: [Collection page]
+    - Spoke: [Related product 1]
+    - Spoke: [Related product 2]
+    - Spoke: [Blog post 1]
+    - Spoke: [Blog post 2]
+
+  Benefits:
+  - Improved topical authority
+  - Better crawlability
+  - Enhanced user experience
+
+[ ] Cross-Linking Strategy
+
+  **Collection ↔ Collection:**
+  - Related categories should link to each other
+  - Example: "Running Shoes" → "Running Apparel"
+  - Current cross-links: [X] (Target: 3-5 per collection)
+
+  **Product ↔ Product:**
+  - "Customers also bought" section
+  - "Related products" section
+  - "Complete the look" bundles
+  - Current cross-links: [X] per product (Target: 4-6)
+
+  **Blog → Product/Collection:**
+  - Every blog post should link to relevant products/collections
+  - Current: [X]% of blog posts have product links (Target: 100%)
+  - Missing opportunities: [List blog posts without product links]
+
+[ ] Contextual Link Opportunities
+
+  **Within product descriptions:**
+  - Link to related products
+  - Link to buying guides
+  - Link to size charts/care instructions
+
+  **Within collection descriptions:**
+  - Link to subcategories
+  - Link to featured products
+  - Link to educational content
+
+  **Within blog content:**
+  - Link to relevant products (BOFU)
+  - Link to collections (MOFU)
+  - Link to related guides (TOFU)
+
+[ ] Footer & Sidebar Opportunities
+  - Popular categories in footer
+  - "Shop by" sections
+  - Featured collections
+  - Seasonal categories
+  - Best sellers
+```
+
+### D. Internal Linking Action Plan
+
+```
+Priority fixes:
+
+**CRITICAL:**
+1. Fix [X] orphan pages by adding to main navigation/collections
+2. Add internal links to top revenue products ([X] products need +3 links each)
+3. Improve link depth for new products (currently [X] clicks, target: 2)
+
+**HIGH PRIORITY:**
+1. Replace [X] generic anchor texts with descriptive anchors
+2. Add cross-links between related collections ([X] opportunities)
+3. Ensure all blog posts link to relevant products ([X]% currently missing)
+
+**MEDIUM PRIORITY:**
+1. Create hub-and-spoke structure for [category]
+2. Add "related products" sections to [X] product pages
+3. Expand footer links to include [categories]
+```
 
 ---
 
 # AUDIT TYPE 1: QUICK TECHNICAL AUDIT
 
-**Duration: 10-15 minutes | Focus: Crawlability, indexability, schema**
+**Focus: Crawlability, indexability, schema**
 
 ## Checklist
 
@@ -280,7 +577,7 @@ curl [domain]/sitemap.xml | head -50
 
 # AUDIT TYPE 2: PRODUCT PAGE AUDIT
 
-**Duration: 20-30 minutes | Focus: Product page optimization**
+**Focus: Product page optimization**
 
 ## Process
 
@@ -477,7 +774,7 @@ If keyword provided, fetch top 5 ranking product pages and compare:
 
 # AUDIT TYPE 3: COLLECTION PAGE AUDIT
 
-**Duration: 20-30 minutes | Focus: Category/collection page optimization**
+**Focus: Category/collection page optimization**
 
 Collection pages are high-leverage SEO assets targeting high-volume category keywords.
 
@@ -671,7 +968,7 @@ If keyword provided:
 
 # AUDIT TYPE 4: LOG FILE ANALYSIS
 
-**Duration: 30-45 minutes | Focus: Crawl budget optimization**
+**Focus: Crawl budget optimization**
 
 Log file analysis reveals how search engines actually crawl your site, identifying wasted crawl budget and missed opportunities.
 
@@ -1028,7 +1325,7 @@ After implementing recommendations:
 
 # AUDIT TYPE 5: COMPETITOR ANALYSIS
 
-**Duration: 30-45 minutes | Focus: Analyze top 5 competitors for target keywords**
+**Focus: Analyze top 5 competitors for target keywords**
 
 ## Process
 
@@ -1332,7 +1629,7 @@ Your Strengths:
 
 # AUDIT TYPE 6: KEYWORD RESEARCH & MAPPING
 
-**Duration: 30-45 minutes | Focus: Find opportunities and map keywords to pages**
+**Focus: Find opportunities and map keywords to pages**
 
 ## Process
 
@@ -1528,7 +1825,7 @@ Preparation timeline:
 
 # AUDIT TYPE 7: FULL COMPREHENSIVE AUDIT
 
-**Duration: 60-90 minutes | Focus: Everything**
+**Focus: Everything**
 
 This combines all audit types into one comprehensive report.
 
@@ -1547,123 +1844,435 @@ Execute in order:
 
 ---
 
-## GENERAL OUTPUT FORMAT
+## OUTPUT FILE GENERATION
 
-For all audit types, structure final report as:
+**IMPORTANT: All audits must create a structured output file in a dedicated folder.**
 
-```markdown
-# [Audit Type] Report
+### Step 1: Create Audit Folder
 
-**Website:** [URL]
-**Audit Type:** [Type]
-**Target:** [Keyword/Country/Page]
-**Date:** [Date]
+Before generating the report, create a folder using this structure:
+
+```bash
+# Extract domain from URL (remove https://, www., trailing slash)
+# Example: https://www.mystore.com/ → mystore.com
+
+# Create folder: audits/[domain]-[audit-type]-[YYYY-MM-DD]/
+mkdir -p "audits/[domain]-[audit-type]-$(date +%Y-%m-%d)"
+
+# Examples:
+# audits/mystore.com-technical-2026-01-31/
+# audits/shopify-store.com-product-2026-01-31/
+# audits/example.com-competitor-2026-01-31/
+```
+
+### Step 2: Generate Audit Report File
+
+Create a single comprehensive markdown file: `audit-report.md`
+
+Full path example: `audits/mystore.com-technical-2026-01-31/audit-report.md`
 
 ---
 
-## Executive Summary
+## AUDIT REPORT TEMPLATE
+
+Use this template for the `audit-report.md` file:
+
+```markdown
+# Ecommerce SEO Audit Report
+
+**Website:** [URL]
+**Audit Type:** [Technical / Product / Collection / Logs / Competitor / Keyword / Full]
+**Target Keyword:** [keyword] (if applicable)
+**Audit Date:** [YYYY-MM-DD]
+**Audited By:** Ecommerce SEO Audit Skill (Claude)
+
+---
+
+## Audit Summary
 
 **Overall SEO Health Score:** [X]/100
 
-**Top 3 Critical Issues:**
-1. [Issue] - [Impact]
-2. [Issue] - [Impact]
-3. [Issue] - [Impact]
+### Score Breakdown:
+- **Technical SEO:** [X]/100
+- **On-Page SEO:** [X]/100
+- **Content Quality:** [X]/100
+- **User Experience:** [X]/100
+- **Competitive Position:** [X]/100
 
-**Top 3 Quick Wins:**
-1. [Opportunity] - [Estimated impact]
-2. [Opportunity] - [Estimated impact]
-3. [Opportunity] - [Estimated impact]
-
-**Biggest Opportunity:**
-[Describe the single biggest opportunity with estimated impact]
-
----
-
-## Detailed Findings
-
-[Audit-specific detailed analysis goes here]
+### Key Metrics:
+- Pages analyzed: [X]
+- Critical issues found: [X]
+- High-priority issues: [X]
+- Quick win opportunities: [X]
 
 ---
 
-## Prioritized Action Plan
+## Critical Issues
 
-### CRITICAL (Fix This Week)
-**Impact: High | Effort: Low-Medium**
+**Issues that need immediate attention:**
 
-1. **[Action Item]**
-   - Why: [Explanation]
-   - How: [Step-by-step]
-   - Expected impact: [Quantified]
-   - Owner: [Who should do this]
-   - Timeline: [Days]
+### 1. [Issue Title]
+- **Severity:** Critical
+- **Impact:** [Describe impact on rankings/traffic/revenue]
+- **Affected Pages:** [X] pages
+  - [URL example 1]
+  - [URL example 2]
+- **Why This Matters:** [Explanation]
+- **Fix:** [Specific solution]
+- **Expected Result:** [Quantified improvement]
 
-### HIGH PRIORITY (Fix This Month)
-**Impact: High | Effort: Medium-High**
+### 2. [Issue Title]
+[Same format...]
 
-[Continue with same format...]
-
-### MEDIUM PRIORITY (Fix Within 90 Days)
-**Impact: Medium | Effort: Varies**
-
-[Continue with same format...]
-
-### LOW PRIORITY (Ongoing / Nice to Have)
-**Impact: Low | Effort: Varies**
-
-[Continue with same format...]
+### 3. [Issue Title]
+[Same format...]
 
 ---
 
-## Expected Impact
+## High-Priority Issues
 
-**If all critical + high priority items completed:**
+**Important issues to address soon:**
 
-- **Organic traffic:** +[X]% within [Y] months
-- **Keyword rankings:** [X] keywords expected to improve
-- **Technical health:** [Current score] to [Projected score]
-- **Revenue impact:** Estimated +[X]% from organic
+### 1. [Issue Title]
+- **Severity:** High
+- **Impact:** [Description]
+- **Affected Pages:** [X] pages
+- **Fix:** [Solution]
 
-**Timeline to see results:**
-- Quick wins: 2-4 weeks
-- Full impact: 3-6 months
+[Continue for all high-priority issues...]
 
 ---
 
-## Benchmarking
+## Medium-Priority Issues
 
-**How you compare to competitors:**
+**Issues to address in the next 30-90 days:**
 
-| Metric | Your Site | Competitor Avg | Gap | Status |
-|--------|-----------|----------------|-----|--------|
-| Product schema | No | Yes (4/5) | Behind | NEEDS WORK |
-| Content length | X words | X words | [X] words short | NEEDS WORK |
-| Reviews count | X | X | [X] fewer | NEEDS WORK |
-| Backlinks | X domains | X domains | [X] fewer | NEEDS WORK |
+### 1. [Issue Title]
+- **Severity:** Medium
+- **Impact:** [Description]
+- **Fix:** [Solution]
+
+[Continue for all medium-priority issues...]
+
+---
+
+## Gap Analysis
+
+### Content Gaps
+
+**Missing content opportunities:**
+
+| Content Type | Target Keyword | Search Volume | Difficulty | Priority | Recommended Action |
+|--------------|----------------|---------------|------------|----------|-------------------|
+| [Type] | [keyword] | [X]/mo | [X/100] | Critical | Create [specific page type] |
+| [Type] | [keyword] | [X]/mo | [X/100] | High | Create [specific page type] |
+
+**Funnel Coverage:**
+- TOFU (Awareness): [X]% of content — [Assessment]
+- MOFU (Consideration): [X]% of content — [Assessment]
+- BOFU (Decision): [X]% of content — [Assessment]
+
+**Content Cannibalization Issues:**
+
+| Keyword | Competing Page 1 | Competing Page 2 | Issue | Solution |
+|---------|------------------|------------------|-------|----------|
+| [keyword] | [URL] | [URL] | [Description] | [Fix] |
+
+### On-Page Gaps
+
+**Elements missing or underoptimized:**
+
+| Element | Your Site | Competitor Avg | Gap | Impact |
+|---------|-----------|----------------|-----|--------|
+| Product descriptions | [X] words | [X] words | -[X] words | Medium |
+| Product images | [X] images | [X] images | -[X] images | High |
+| Review count | [X] reviews | [X] reviews | -[X] reviews | High |
+| Internal links | [X] links | [X] links | -[X] links | Medium |
+| Schema markup | [X/5 types] | [X/5 types] | Missing [X] | Critical |
+
+### Technical Gaps
+
+**Technical issues vs. competitors:**
+
+| Factor | Your Site | Competitor Avg | Status |
+|--------|-----------|----------------|--------|
+| HTTPS | [Yes/No] | 100% | [✓ / ✗] |
+| Mobile-friendly | [Yes/No] | 100% | [✓ / ✗] |
+| Page speed | [X]s | [X]s | [✓ / ✗] |
+| Structured data | [Types] | [Types] | [✓ / ✗] |
+
+---
+
+## Keyword Opportunities
+
+### High-Value Keywords to Target
+
+**Keywords with strong opportunity:**
+
+| Keyword | Volume | Difficulty | Current Rank | Competitor Rank | Opportunity Score | Action Required |
+|---------|--------|------------|--------------|-----------------|-------------------|-----------------|
+| [keyword] | [X]/mo | [X/100] | Not ranking | #3-#5 | High | Create collection page |
+| [keyword] | [X]/mo | [X/100] | #15 | #1-#3 | High | Optimize existing page |
+| [keyword] | [X]/mo | [X/100] | Not ranking | #5-#10 | Medium | Create blog post |
+
+### Keyword Mapping Recommendations
+
+**Assign keywords to pages:**
+
+#### Homepage
+- Primary: [keyword] ([X] searches/mo)
+- Secondary: [keyword] ([X] searches/mo)
+- Current optimization: [Assessment]
+- **Action:** [Specific changes needed]
+
+#### [Collection Name]
+- Primary: [keyword] ([X] searches/mo)
+- Secondary: [keyword], [keyword]
+- Current optimization: [Assessment]
+- **Action:** [Specific changes needed]
+
+#### New Pages Needed
+1. **[Page Type]: "[Title]"**
+   - Target keyword: [keyword] ([X]/mo)
+   - Search intent: [Informational/Commercial/Transactional]
+   - Content type: [Collection/Product/Blog]
+   - Estimated impact: [Traffic/revenue projection]
+
+---
+
+## Implementation Plan
+
+### Phase 1: Quick Wins (Week 1-2)
+
+**High impact, low effort items:**
+
+#### 1. [Action Item]
+- **Task:** [Detailed description]
+- **Why:** [Business justification]
+- **How:**
+  1. [Step 1]
+  2. [Step 2]
+  3. [Step 3]
+- **Owner:** [Development/Content/Marketing]
+- **Effort:** [Hours/Days]
+- **Expected Impact:** [Specific outcome with numbers]
+- **Success Metric:** [How to measure]
+
+#### 2. [Action Item]
+[Same format...]
+
+**Phase 1 Expected Results:**
+- [Metric]: +[X]% improvement
+- [Metric]: +[X]% improvement
+
+---
+
+### Phase 2: Foundation Fixes (Week 3-6)
+
+**Critical technical and on-page improvements:**
+
+#### 1. [Action Item]
+[Same format as Phase 1...]
+
+**Phase 2 Expected Results:**
+- [Metric]: +[X]% improvement
+- [Metric]: +[X]% improvement
+
+---
+
+### Phase 3: Content & Authority (Month 2-3)
+
+**Content creation and optimization:**
+
+#### 1. [Action Item]
+[Same format...]
+
+**Phase 3 Expected Results:**
+- [Metric]: +[X]% improvement
+- [Metric]: +[X]% improvement
+
+---
+
+### Phase 4: Ongoing Optimization (Month 4+)
+
+**Continuous improvement items:**
+
+#### 1. [Action Item]
+[Same format...]
+
+---
+
+## Competitor Benchmarking
+
+### Top 5 Competitors Analysis
+
+**For target keyword: "[keyword]"**
+
+#### Competitor #1: [Domain]
+- **Ranking Position:** #1
+- **URL:** [URL]
+- **Domain Authority:** [X]
+- **Page Authority:** [X]
+
+**Strengths:**
+- [Strength 1 with data]
+- [Strength 2 with data]
+
+**What they do better:**
+- [Specific advantage]
+- [Specific advantage]
+
+**What you do better:**
+- [Your advantage]
+- [Your advantage]
+
+[Repeat for competitors #2-#5...]
+
+### Competitive Comparison Matrix
+
+| Factor | Your Site | Comp #1 | Comp #2 | Comp #3 | Comp #4 | Comp #5 | Winner | Gap |
+|--------|-----------|---------|---------|---------|---------|---------|--------|-----|
+| Content words | [X] | [X] | [X] | [X] | [X] | [X] | [Domain] | -[X] words |
+| Images | [X] | [X] | [X] | [X] | [X] | [X] | [Domain] | -[X] images |
+| Schema types | [X] | [X] | [X] | [X] | [X] | [X] | [Domain] | Missing [types] |
+| Reviews | [X] | [X] | [X] | [X] | [X] | [X] | [Domain] | -[X] reviews |
+| Internal links | [X] | [X] | [X] | [X] | [X] | [X] | [Domain] | -[X] links |
+| Backlinks | [X] | [X] | [X] | [X] | [X] | [X] | [Domain] | -[X] links |
+
+**Competitor Average Benchmarks:**
+- Content length: [X] words (Your target: [X] words)
+- Images per page: [X] (Your target: [X])
+- Reviews: [X] (Your target: [X])
+
+---
+
+## Strategic Recommendations
+
+### Content Strategy
+
+**TOFU/MOFU/BOFU Balance:**
+- Current distribution: TOFU [X]%, MOFU [X]%, BOFU [X]%
+- Recommended: TOFU 40-50%, MOFU 30-40%, BOFU 20-30%
+- **Action:** [Specific content to create for each funnel stage]
+
+**Cannibalization Fixes:**
+- [X] keyword cannibalization issues found
+- **Action:** [Specific fixes with URLs]
+
+### Internal Linking Strategy
+
+**Current State:**
+- Average internal links per page: [X]
+- Orphan pages: [X]
+- Link depth issues: [X] pages
+
+**Recommended Structure:**
+- Implement hub-and-spoke for: [Categories]
+- Add cross-links between: [Page types]
+- Fix orphan pages: [Specific actions]
+
+### Technical Optimizations
+
+**Priority technical fixes:**
+1. [Technical issue and solution]
+2. [Technical issue and solution]
+3. [Technical issue and solution]
+
+---
+
+## Expected Impact & ROI
+
+### Projected Results (if all recommendations implemented)
+
+**Timeline: 3-6 months**
+
+| Metric | Current | Projected | Improvement |
+|--------|---------|-----------|-------------|
+| Organic traffic | [X]/mo | [X]/mo | +[X]% |
+| Ranking keywords | [X] | [X] | +[X] keywords |
+| Avg. position | #[X] | #[X] | +[X] positions |
+| Organic revenue | $[X]/mo | $[X]/mo | +$[X]/mo (+[X]%) |
+| Conversion rate | [X]% | [X]% | +[X]% |
+
+**Revenue Impact Estimate:**
+- Monthly organic revenue increase: +$[X]
+- Annual impact: +$[X]
+- ROI: [X]% (based on [assumptions])
+
+**Quick Wins Impact (0-30 days):**
+- [Metric]: +[X]%
+- Estimated revenue: +$[X]/mo
+
+---
+
+## Implementation Timeline
+
+```
+Week 1-2: Quick Wins
+├─ Add missing schema markup
+├─ Fix critical technical issues
+├─ Optimize top 5 product pages
+└─ Expected lift: +[X]% traffic
+
+Week 3-6: Foundation
+├─ Expand thin content
+├─ Fix internal linking
+├─ Optimize collection pages
+└─ Expected lift: +[X]% traffic
+
+Month 2-3: Content & Authority
+├─ Create [X] new pages
+├─ Build backlinks
+├─ Implement hub-and-spoke
+└─ Expected lift: +[X]% traffic
+
+Month 4+: Ongoing
+├─ Monitor and iterate
+├─ Seasonal content
+├─ Continuous optimization
+└─ Expected lift: +[X]% traffic
+```
+
+---
+
+## Tools & Resources
+
+### Implementation Tools
+- **Schema markup:** [schema.org](https://schema.org), Google's Structured Data Markup Helper
+- **Keyword research:** Google Keyword Planner, Semrush, Ahrefs
+- **Technical SEO:** Screaming Frog, Google Search Console
+- **Page speed:** PageSpeed Insights, GTmetrix
+- **Log analysis:** Screaming Frog Log Analyzer, OnCrawl
+
+### Monitoring Tools
+- Google Search Console (track rankings, impressions, clicks)
+- Google Analytics (track traffic, conversions, revenue)
+- Rank tracking tool (monitor keyword positions)
 
 ---
 
 ## Next Steps
 
-1. **Review this audit** with your team
-2. **Assign owners** for each action item
-3. **Set timeline** for implementation
-4. **Schedule follow-up** audit in 90 days to measure progress
-5. **Track metrics** weekly (rankings, traffic, conversions)
+1. **Review this audit** with your team and stakeholders
+2. **Prioritize actions** based on:
+   - Business impact (revenue potential)
+   - Implementation effort
+   - Resource availability
+3. **Assign owners** for each phase of implementation
+4. **Set timeline** with specific deadlines
+5. **Track progress** weekly using recommended metrics
+6. **Schedule follow-up audit** in 90 days to measure improvements
 
 ---
 
-## Resources & Tools Recommended
+## Support
 
-**For implementation:**
-- Schema markup: schema.org, Google's Structured Data Markup Helper
-- Keyword research: Google Keyword Planner, Semrush, Ahrefs
-- Log analysis: Screaming Frog Log Analyzer, OnCrawl
+**Audit conducted by:** Ecommerce SEO Audit Skill
+**Developed by:** Affilino NZ - Auckland Shopify SEO Agency
+**Contact:** hello@affilino.co.nz
+**Website:** [affilino.co.nz](https://affilino.co.nz)
 
-**For ongoing monitoring:**
-- Google Search Console
-- Google Analytics
-- Rank tracking tool (Semrush, Ahrefs, etc.)
+For questions about this audit or implementation support, contact Affilino NZ.
 ```
 
 ---

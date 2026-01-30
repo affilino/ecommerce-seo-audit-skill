@@ -70,13 +70,13 @@ Or provide arguments directly:
 
 ### Available Audit Types
 
-1. **Quick Technical Audit** - Crawlability, indexability, and schema check (10-15 min)
-2. **Product Page Audit** - Deep analysis of product page optimization (20-30 min)
-3. **Collection Page Audit** - Category/collection page SEO review (20-30 min)
-4. **Log File Analysis** - Crawl budget and Googlebot behavior analysis (30-45 min)
-5. **Competitor Analysis** - Analyze top 5 ranking competitors (30-45 min)
-6. **Keyword Research & Mapping** - Find opportunities and map keywords (30-45 min)
-7. **Full Comprehensive Audit** - Complete audit covering all areas (60-90 min)
+1. **Quick Technical Audit** - Crawlability, indexability, and schema check
+2. **Product Page Audit** - Deep analysis of product page optimization
+3. **Collection Page Audit** - Category/collection page SEO review
+4. **Log File Analysis** - Crawl budget and Googlebot behavior analysis
+5. **Competitor Analysis** - Analyze top 5 ranking competitors
+6. **Keyword Research & Mapping** - Find opportunities and map keywords
+7. **Full Comprehensive Audit** - Complete audit covering all areas
 
 ## Examples
 
