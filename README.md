@@ -1,6 +1,8 @@
-# Ecommerce SEO Audit Skill for Claude Code
+# Ecommerce SEO Audit Skill
 
-Professional ecommerce SEO audit skill for Claude Code, developed by **Auckland Shopify SEO Agency** - Affilino NZ. This skill provides comprehensive SEO audits for online stores, covering product pages, collection pages, technical SEO, log file analysis, and competitor research.
+Professional ecommerce SEO audit skill for AI coding agents, developed by **Auckland Shopify SEO Agency** - Affilino NZ. This skill provides comprehensive SEO audits for online stores, covering product pages, collection pages, technical SEO, log file analysis, and competitor research.
+
+**Works with:** Claude Code, Cursor, Windsurf, Cline, Codex, and other AI coding assistants that support skills.
 
 ## Features
 
@@ -16,23 +18,35 @@ Professional ecommerce SEO audit skill for Claude Code, developed by **Auckland 
 
 ## Installation
 
-Install this skill using the Claude Code skills manager:
+Install this skill using the skills manager:
 
 ```bash
 npx skills add https://github.com/affilino/ecommerce-seo-audit-skill
 ```
 
-This will launch an interactive installer where you can select which AI agents (Claude Code, Cursor, Windsurf, etc.) to install the skill to.
+This will launch an interactive installer where you can **select which AI coding agents** to install the skill to:
+
+- ✅ Claude Code
+- ✅ Cursor
+- ✅ Windsurf
+- ✅ Cline
+- ✅ Codex
+- ✅ Continue
+- ✅ And more...
 
 ### Start a Session
 
-After installation, the skill will be available in your Claude Code sessions. Simply start using it:
+After installation, start your AI coding agent:
 
+**Claude Code:**
 ```bash
 claude
 ```
 
-Then invoke the skill within your session:
+**Cursor / Windsurf / Other agents:**
+Open your editor and start a new chat session.
+
+Then invoke the skill in any session:
 
 ```bash
 /ecommerce-seo-audit
@@ -40,7 +54,7 @@ Then invoke the skill within your session:
 
 ## Usage
 
-Invoke the skill in Claude Code:
+Invoke the skill in your AI coding agent:
 
 ```bash
 /ecommerce-seo-audit
@@ -99,7 +113,7 @@ All audits provide:
 
 ## Requirements
 
-- Claude Code CLI
+- Any AI coding agent that supports skills (Claude Code, Cursor, Windsurf, Cline, etc.)
 - Internet connection for WebSearch and WebFetch tools
 - For log file analysis: Access to server logs (Apache, Nginx, or IIS format)
 
