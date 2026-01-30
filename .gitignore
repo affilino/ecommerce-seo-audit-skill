@@ -34,17 +34,9 @@ node_modules/
 npm-debug.log
 yarn-error.log
 
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-.Python
-env/
-venv/
-.env
+# Build artifacts
 dist/
 build/
-*.egg-info/
 
 # Logs
 *.log

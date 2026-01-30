@@ -16,37 +16,27 @@ Professional ecommerce SEO audit skill for Claude Code, developed by **Auckland 
 
 ## Installation
 
-### Using Claude Code Plugin Manager
+Install this skill using the Claude Code skills manager:
 
-1. Add the marketplace to your Claude Code:
 ```bash
-/plugin marketplace add affilino/ecommerce-seo-audit-skill
+npx skills add https://github.com/affilino/ecommerce-seo-audit-skill
 ```
 
-2. Install the skill:
+This will launch an interactive installer where you can select which AI agents (Claude Code, Cursor, Windsurf, etc.) to install the skill to.
+
+### Start a Session
+
+After installation, the skill will be available in your Claude Code sessions. Simply start using it:
+
 ```bash
-/plugin install ecommerce-seo-audit
+claude
 ```
 
-3. The skill will be available immediately in your Claude Code session.
+Then invoke the skill within your session:
 
-### Manual Installation
-
-1. Clone this repository:
 ```bash
-git clone https://github.com/affilino/ecommerce-seo-audit-skill.git
+/ecommerce-seo-audit
 ```
-
-2. Copy to your skills directory:
-```bash
-# For personal skills
-cp -r ecommerce-seo-audit-skill ~/.claude/skills/
-
-# OR for project-specific skills
-cp -r ecommerce-seo-audit-skill .claude/skills/
-```
-
-3. Restart Claude Code or reload your skills.
 
 ## Usage
 
