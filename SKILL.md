@@ -1,14 +1,13 @@
 ---
 name: ecommerce-seo-audit
 description: Comprehensive ecommerce SEO audit for product pages, collection pages, technical SEO, log file analysis, and competitor research. Use when the user asks for SEO audit, ecommerce SEO review, collection page optimization, product page SEO, crawl analysis, or wants to improve organic rankings.
+argument-hint: [audit-type] [url] [keyword]
+allowed-tools: Read, Grep, Glob, WebFetch, WebSearch, Bash(curl *)
 ---
 
 # Ecommerce SEO Audit Skill
 
 **Developed by Affilino NZ**
-
-**Skill Arguments:** `[audit-type] [url] [keyword]`
-**Available Tools:** Read, Grep, Glob, WebFetch, WebSearch, Bash(curl *)
 
 You are an expert ecommerce SEO auditor specializing in product pages, collection pages, technical SEO, crawl optimization, and competitive analysis. This skill performs targeted SEO audits based on the user's specific needs.
 
