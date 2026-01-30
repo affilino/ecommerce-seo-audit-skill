@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ecommerce-seo-audit-skill"
-version = "1.0.0"
+version = "1.1.0"
 description = "Professional ecommerce SEO audit skill for Claude Code with 7 specialized audit types"
 readme = "README.md"
 requires-python = ">=3.8"

@@ -62,6 +62,28 @@ All audits follow this proven framework:
 
 ---
 
+## COMMON ECOMMERCE SEO ISSUES TO WATCH FOR
+
+Every audit should specifically check for these frequent ecommerce problems:
+
+### Critical Issues:
+1. **Thin Category/Collection Pages** - Category pages with <300 words or no unique content
+2. **Duplicate Product Descriptions** - Copy-pasted manufacturer descriptions across products
+3. **Missing Product Schema** - No structured data on product pages (critical for rich results)
+4. **Faceted Navigation Duplicates** - Filter parameters creating infinite URL variations
+5. **Out-of-Stock Pages Mishandled** - Discontinued products returning 404s or left indexed with "out of stock"
+
+### On-Page Issues:
+6. **Duplicate Title Tags** - Multiple products/pages sharing identical titles
+7. **Multiple H1 Tags** - More than one H1 per page (confuses search engines)
+8. **H1 Missing Primary Keyword** - H1 doesn't contain target keyword
+9. **Thin Product Content** - Product descriptions under 200 words
+10. **Missing Product Images** - Products without images or broken image links
+
+**Note:** Flag these issues immediately when found in any audit type.
+
+---
+
 # AUDIT TYPE 1: QUICK TECHNICAL AUDIT
 
 **Duration: 10-15 minutes | Focus: Crawlability, indexability, schema**
@@ -123,6 +145,57 @@ curl [domain]/sitemap.xml | head -50
   - Self-referencing canonicals on all pages
   - Handles duplicate content (variants, filters)
   - Pagination handled correctly
+
+[ ] Faceted Navigation / Filter Parameters
+  CRITICAL ECOMMERCE ISSUE: Filters creating duplicate URLs
+
+  Check for duplicate URLs from filters:
+  - /shoes vs /shoes?color=red
+  - /shoes?color=red&size=10
+  - /shoes?sort=price
+
+  Current handling:
+  [ ] Canonical tags point filtered URLs to main collection
+  [ ] robots.txt blocks filter parameters
+  [ ] URL parameter handling configured in GSC
+  [ ] OR: Filters use AJAX (no URL change)
+
+  If misconfigured:
+  - Crawl budget waste
+  - Duplicate content issues
+  - Thin content pages indexed
+
+  Recommended solution:
+  - Use canonical tags to main collection page
+  - Block filter parameters in robots.txt
+  - Example: Disallow: /*?color=
+
+[ ] Out-of-Stock / Discontinued Products
+  CRITICAL ECOMMERCE ISSUE: How are unavailable products handled?
+
+  Strategy check:
+  [ ] Temporarily out of stock:
+    - Keep page live with "out of stock" notice
+    - Add expected restock date if available
+    - Use schema: "availability": "OutOfStock"
+    - Keep indexed (will be back in stock)
+
+  [ ] Permanently discontinued:
+    - 301 redirect to similar product OR
+    - 301 redirect to parent category
+    - DO NOT return 404 (loses link equity)
+    - DO NOT leave indexed with "out of stock"
+
+  [ ] Seasonal products:
+    - Keep live during off-season
+    - Show "available [season/month]"
+    - Maintain for returning traffic
+
+  COMMON MISTAKES TO FLAG:
+  - Discontinued products returning 404 (should 301)
+  - Out of stock products removed (should stay live)
+  - No schema markup indicating availability status
+  - Out of stock products still showing in sitemap as available
 ```
 
 ### C. Schema Markup Validation
@@ -237,14 +310,59 @@ For each product, check:
   BAD: Too short, no CTA, duplicate
 
 [ ] H1 Heading
-  - One H1 per page
-  - Product name with keyword
-  - Matches search intent
+  Count: [X] H1 tags (MUST be exactly 1)
+  Content: [Current H1 text]
+  Contains primary keyword: [Yes/No]
+  Matches search intent: [Yes/No]
+
+  ISSUES TO FLAG:
+  - Multiple H1 tags (confuses search engines about page topic)
+  - H1 missing primary keyword
+  - H1 doesn't match title tag intent
+
+[ ] Title Tag Duplication Check
+  Title: [Current title]
+  Duplicate check: [Unique/Duplicate]
+  If duplicate, also used on: [List URLs]
+
+  CRITICAL: Search for this exact title across site
+  - Each page needs unique title
+  - Common issue: All products in category share same title template
 
 [ ] Product Description
-  Length: [X] words (target: 300+ for important products)
+  Length: [X] words
   Unique: [Yes/No] - Check if copied from manufacturer
+  Duplicate check: [Unique/Duplicate] - Compare to other products
   Keyword density: [X]% (target: 1-2%)
+
+  **COMPETITOR-BASED CONTENT ANALYSIS:**
+  If keyword provided, check top 5 ranking product pages:
+  - Competitor average word count: [X] words
+  - Your word count: [X] words
+  - Gap: +/- [X] words
+  - **Recommendation: Match or exceed competitor average**
+
+  CONTENT LENGTH GUIDELINES (Use as baseline if no competitor data):
+  - Simple products: 100-150 words acceptable
+  - Standard products: 150-250 words
+  - High-value/competitive products: 250-400 words
+  - Complex products (tech, appliances): 300-500+ words
+
+  **For competitive keywords: Let competitor average guide the target**
+
+  THIN CONTENT FLAGS:
+  - Under 50 words: CRITICAL (too thin)
+  - Significantly below competitor average (>40% less): HIGH PRIORITY
+  - 50-100 words for competitive keyword: Expand to match competitors
+  - Focus on UNIQUE content over length
+  - Quality > quantity for product descriptions
+
+  CRITICAL ISSUES:
+  - Manufacturer copy: Rewrite with unique content
+  - Duplicate across products: Each needs unique description
+  - No description at all: CRITICAL
+  - Generic descriptions ("Great product!"): Needs specifics
+  - Below competitor average for target keyword: Expand content
 
   Structure check:
   [ ] Opening paragraph (what it is + benefit)
@@ -254,14 +372,26 @@ For each product, check:
   [ ] Shipping/returns info
 
 [ ] Images
-  Count: [X] images (target: 6-8)
+  Count: [X] images (target: 6-8, minimum: 1)
   Format: [JPG/WebP/PNG]
   File names: Descriptive? [Yes/No]
   Alt text: Present? Optimized? [Yes/No]
+  Working: All images load? [Yes/No]
 
-  [ ] Multiple angles
-  [ ] Zoom functionality
+  CRITICAL CHECKS:
+  [ ] At least 1 product image present (missing = CRITICAL issue)
+  [ ] No broken image links (404 errors)
+  [ ] No placeholder images (image-placeholder.jpg, no-image.png)
+  [ ] Multiple angles (front, back, detail shots)
+  [ ] Zoom functionality available
   [ ] Descriptive file names (not IMG_1234.jpg)
+  [ ] Each image has unique, descriptive alt text
+
+  COMMON ISSUES:
+  - Product has no images at all
+  - Images return 404 errors
+  - Using generic placeholder images
+  - All images have same alt text ("product image")
 
 [ ] Internal Linking
   Links to related products: [X]
@@ -307,17 +437,25 @@ For each product, check:
 
 ### Step 3: Competitor Comparison
 
-If keyword provided, fetch top 3 ranking product pages and compare:
+If keyword provided, fetch top 5 ranking product pages and compare:
 
-| Element | Your Site | Competitor 1 | Competitor 2 | Competitor 3 |
-|---------|-----------|--------------|--------------|--------------|
-| Title length | X chars | X chars | X chars | X chars |
-| Description words | X | X | X | X |
-| Images | X | X | X | X |
-| Schema | Yes/No | Yes/No | Yes/No | Yes/No |
-| Reviews | X | X | X | X |
-| Internal links | X | X | X | X |
-| Unique content | Yes/No | Yes/No | Yes/No | Yes/No |
+| Element | Your Site | Comp 1 | Comp 2 | Comp 3 | Comp 4 | Comp 5 | **Competitor Avg** | Gap |
+|---------|-----------|--------|--------|--------|--------|--------|-------------------|-----|
+| Title length | X chars | X | X | X | X | X | **X chars** | +/- X |
+| Description words | X | X | X | X | X | X | **X words** | **+/- X** |
+| Images | X | X | X | X | X | X | **X images** | +/- X |
+| Schema | Yes/No | Y/N | Y/N | Y/N | Y/N | Y/N | **X/5 have it** | - |
+| Reviews | X | X | X | X | X | X | **X avg** | +/- X |
+| Internal links | X | X | X | X | X | X | **X avg** | +/- X |
+| Unique content | Yes/No | Y/N | Y/N | Y/N | Y/N | Y/N | **X/5 unique** | - |
+
+**CRITICAL: Use competitor average to set targets**
+
+**Content Length Recommendation:**
+- Competitor average: [X] words
+- Your content: [X] words
+- **Target:** Match or exceed average by 10-20%
+- **Recommended word count:** [Competitor avg + 20%] words
 
 **Gap analysis:** What are competitors doing better?
 
@@ -364,23 +502,69 @@ For each collection:
   Current: [X]
   Recommendation: [Y]
 
+[ ] Title Tag Duplication Check
+  Title: [Current title]
+  Duplicate check: [Unique/Duplicate]
+  If duplicate, also used on: [List URLs]
+
+  COMMON ISSUE: Multiple collection pages sharing same title
+  - Check: "Shop [Category]" used across all collections
+  - Each collection needs unique, keyword-specific title
+
 [ ] H1 Heading
+  Count: [X] H1 tags (MUST be exactly 1)
+  Content: [Current H1]
+  Contains primary keyword: [Yes/No]
   Should match primary category keyword
+
+  ISSUES TO FLAG:
+  - Multiple H1 tags on page
+  - H1 missing category keyword
+  - Generic H1 like "Products" or "Shop Now"
+
   Current: [X]
   Recommendation: [Y]
 
 [ ] Category Description Content
 
-  **Above the fold (150-200 words):**
+  CRITICAL: Check for THIN CATEGORY PAGE issue
+
+  **Step 1: Analyze competitor content (if keyword provided)**
+
+  Use WebSearch to check top 5 ranking collection pages for this keyword:
+  - Competitor 1 word count: [X]
+  - Competitor 2 word count: [X]
+  - Competitor 3 word count: [X]
+  - Competitor 4 word count: [X]
+  - Competitor 5 word count: [X]
+  - **Competitor average: [X] words**
+
+  **Step 2: Compare your content**
+
+  **Above the fold (intro content):**
   Current word count: [X]
+  Competitor average for intro: [X] words
+  Gap: +/- [X] words
   Keyword usage: [X] times
   Quality: [Assessment]
 
-  **Below product grid (500-1000 words):**
+  **Below product grid (buying guides/FAQ):**
   Current word count: [X]
+  Competitor average for bottom content: [X] words
+  Gap: +/- [X] words
   Present: [Yes/No]
 
-  If missing or thin, recommend structure:
+  **Total page content:**
+  Your total: [X] words
+  Competitor average: [X] words
+  **RECOMMENDATION: Target [Competitor avg + 20%] words**
+
+  **THIN CONTENT FLAGS:**
+  - If significantly below competitor average (>30% less)
+  - If no content below product grid but competitors have it
+  - If under 300 words total when competitors average 800+
+
+  If missing or thin compared to competitors, recommend structure:
 
   1. Category overview (200 words)
   2. Buying guide section:
@@ -455,12 +639,30 @@ For each collection:
 
 ### Step 4: Content Gap Analysis
 
+**CRITICAL: Use competitor data to set realistic targets**
+
 If keyword provided:
 - Search for "[keyword]" and analyze top 5 results
+
+**Content Depth Comparison:**
+| Metric | Your Site | Comp 1 | Comp 2 | Comp 3 | Comp 4 | Comp 5 | **Avg** | Gap |
+|--------|-----------|--------|--------|--------|--------|--------|---------|-----|
+| Total words | X | X | X | X | X | X | **X** | +/- X |
+| H2 sections | X | X | X | X | X | X | **X** | +/- X |
+| FAQ questions | X | X | X | X | X | X | **X** | +/- X |
+| Internal links | X | X | X | X | X | X | **X** | +/- X |
+| Buying guide | Y/N | Y/N | Y/N | Y/N | Y/N | Y/N | **X/5** | - |
+
+**Content Gap Questions:**
 - What content do they have that you don't?
 - What questions do they answer?
 - What internal linking do they use?
 - What buying guide elements do they include?
+
+**Set Target Based on Competitor Average:**
+- Recommended word count: [Competitor avg + 15-20%]
+- Recommended sections: [List based on what 3+ competitors have]
+- Recommended FAQ count: [Match or exceed competitor average]
 
 **Output:** Collection page optimization guide with content template and internal linking map.
 
@@ -1476,9 +1678,17 @@ For all audit types, structure final report as:
    - Include code snippets for technical fixes
    - Show real URLs and real data
 
-3. **Quantify Everything**
+3. **Use Competitor-Based Benchmarks**
+   - NEVER suggest arbitrary word counts
+   - ALWAYS check top 5 competitors for the target keyword
+   - Calculate competitor average for: word count, images, reviews, links
+   - Set targets based on competitor data: "Competitors average 450 words, recommend 500-550 words"
+   - Don't: "Add 300 words to this page"
+   - Do: "Top 5 competitors average 520 words. Your page has 180 words. Recommend expanding to 550-600 words to be competitive."
+
+4. **Quantify Everything**
    - Use numbers (word count, load time, number of links)
-   - Provide benchmarks and targets
+   - Provide benchmarks and targets based on competitor analysis
    - Show gaps in comparison tables
 
 4. **Prioritize Ruthlessly**

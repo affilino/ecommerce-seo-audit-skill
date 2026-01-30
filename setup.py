@@ -7,7 +7,7 @@ long_description = (this_directory / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="ecommerce-seo-audit-skill",
-    version="1.0.0",
+    version="1.1.0",
     author="Affilino NZ",
     author_email="hello@affilino.co.nz",
     description="Professional ecommerce SEO audit skill for Claude Code with 7 specialized audit types",

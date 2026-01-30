@@ -5,7 +5,10 @@ Professional ecommerce SEO audit skill for Claude Code, developed by **Auckland 
 ## Features
 
 - **7 Specialized Audit Types** - Technical, Product, Collection, Log Files, Competitors, Keywords, and Full Comprehensive audits
-- **Competitor Analysis** - Analyze top 5 ranking sites for any keyword
+- **Competitor-Based Benchmarking** - Data-driven content targets based on top 5 competitors' averages (not arbitrary word counts)
+- **Ecommerce Issue Detection** - Automatically flags thin category pages, duplicate product descriptions, faceted navigation duplicates, and out-of-stock mishandling
+- **Enhanced On-Page Analysis** - Detects duplicate titles, multiple H1 tags, missing product images, and thin content issues
+- **Competitor Analysis** - Analyze top 5 ranking sites for any keyword with detailed gap analysis
 - **Log File Analysis** - Crawl budget optimization and Googlebot behavior insights
 - **Keyword Research & Mapping** - Find opportunities and map keywords to pages
 - **Real, Actionable Recommendations** - Prioritized action plans with before/after examples
@@ -142,6 +145,14 @@ We welcome contributions! If you'd like to improve this skill:
 5. Open a Pull Request
 
 ## Version History
+
+- **v1.1.0** (2026-01-31) - Enhanced ecommerce audit features
+  - Added common ecommerce SEO issues detection (thin pages, duplicate content, faceted navigation)
+  - Competitor-based content benchmarking (data-driven word count targets)
+  - Enhanced on-page checks (duplicate titles, multiple H1s, missing images)
+  - Out-of-stock product handling strategies
+  - Faceted navigation duplicate detection
+  - Improved product/collection page analysis
 
 - **v1.0.0** (2026-01-30) - Initial release
   - 7 audit types
