@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ecommerce-seo-audit-skill"
+version = "1.0.0"
+description = "Professional ecommerce SEO audit skill for Claude Code with 7 specialized audit types"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+keywords = ["claude-code", "claude-skill", "agent-skill", "seo", "ecommerce", "shopify", "seo-audit", "ai-agent"]
+authors = [
+  {name = "Affilino NZ", email = "hello@affilino.co.nz"}
+]
+maintainers = [
+  {name = "Affilino NZ", email = "hello@affilino.co.nz"}
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+
+[project.urls]
+Homepage = "https://github.com/affilino/ecommerce-seo-audit-skill"
+Documentation = "https://github.com/affilino/ecommerce-seo-audit-skill#readme"
+Repository = "https://github.com/affilino/ecommerce-seo-audit-skill"
+"Bug Tracker" = "https://github.com/affilino/ecommerce-seo-audit-skill/issues"
+"NPM Package" = "https://www.npmjs.com/package/@affilino/ecommerce-seo-audit-skill"

@@ -42,6 +42,9 @@ __pycache__/
 env/
 venv/
 .env
+dist/
+build/
+*.egg-info/
 
 # Logs
 *.log
