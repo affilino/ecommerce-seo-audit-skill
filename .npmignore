@@ -1,0 +1,32 @@
+# Git files
+.git/
+.gitignore
+
+# Documentation (not needed in npm package)
+PUBLISH_INSTRUCTIONS.md
+SUBMISSION_GUIDE.md
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Local settings
+.claude/settings.local.json
+
+# Logs
+*.log
+logs/
+
+# Node modules (if any)
+node_modules/
+
+# Temporary files
+*.tmp
+.tmp/
