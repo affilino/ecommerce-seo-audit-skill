@@ -5,6 +5,7 @@
 # Documentation (not needed in npm package)
 PUBLISH_INSTRUCTIONS.md
 SUBMISSION_GUIDE.md
+NPM_PUBLISH_GUIDE.md
 
 # IDE
 .vscode/
